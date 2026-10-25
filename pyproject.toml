@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tde-nbody"
+version = "0.1.0"
+description = "GPU N-body simulation of a tidal disruption event in Taichi"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "TDE N-body contributors" }]
+dependencies = [
+    "numpy>=1.26",
+    "taichi>=1.7.4",
+    "matplotlib>=3.8",
+    "pillow>=10",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+video = ["imageio[ffmpeg]>=2.34"]
+
+[project.scripts]
+tde = "tde.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
