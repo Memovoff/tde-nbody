@@ -1,5 +1,7 @@
 # Tidal Disruption — GPU N-body
 
+[![tests](https://github.com/Memovoff/tde-nbody/actions/workflows/tests.yml/badge.svg)](https://github.com/Memovoff/tde-nbody/actions/workflows/tests.yml)
+
 Симуляция приливного разрушения звезды чёрной дырой: звезда на параболической
 орбите проходит перицентр, её оболочка срывается, часть вещества улетает,
 часть остаётся связанной и возвращается. Гравитация считается прямым
@@ -62,6 +64,13 @@ GPU-гравитация, но без внешнего поля чёрной д�
 Максимальный относительный дрейф — **0.031%**, в конце — **0.011%**.
 
 ## Быстрый старт
+
+```bash
+git clone https://github.com/Memovoff/tde-nbody.git
+cd tde-nbody
+```
+
+Windows (PowerShell):
 
 ```powershell
 python -m venv .venv
