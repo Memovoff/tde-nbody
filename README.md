@@ -144,14 +144,14 @@ tde bench --sizes 5000 20000 50000
 в звёздном динамическом времени
 
 $$
-t_* = \sqrt{\frac{R_\odot^3}{G M_\odot}} \approx 26.5\ \text{мин}.
+t_\star = \sqrt{\frac{R_\odot^3}{G M_\odot}} \approx 26.5\ \text{мин}.
 $$
 
 По умолчанию:
 
 - $M_\mathrm{BH} = 10^3\,M_\odot$ — промежуточная чёрная дыра;
-- $M_* = 1\,M_\odot$, $R_* = 1\,R_\odot$;
-- $r_t = R_*(M_\mathrm{BH}/M_*)^{1/3} = 10\,R_\odot$;
+- $M_\star = 1\,M_\odot$, $R_\star = 1\,R_\odot$;
+- $r_t = R_\star(M_\mathrm{BH}/M_\star)^{1/3} = 10\,R_\odot$;
 - $\beta = r_t/r_p = 1.4$, то есть $r_p = 7.14\,R_\odot$;
 - старт с $r_0 = 4r_t = 40\,R_\odot$.
 
@@ -161,8 +161,7 @@ $$
 \mathbf{a}_i =
 \sum_{j \ne i} G m_j
 \frac{\mathbf{r}_j - \mathbf{r}_i}
-{\left(|\mathbf{r}_j - \mathbf{r}_i|^2 + \epsilon^2\right)^{3/2}}
--
+{\left(|\mathbf{r}_j - \mathbf{r}_i|^2 + \epsilon^2\right)^{3/2}} -
 \frac{G M_\mathrm{BH}\,\mathbf{r}_i}
 {\left(|\mathbf{r}_i|^2 + \epsilon_\mathrm{BH}^2\right)^{3/2}}.
 $$
